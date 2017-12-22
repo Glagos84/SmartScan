@@ -6,8 +6,7 @@ package com.mindweaver.smartscan.models;
 
 public class NewUser {
 
-    private String email, name, photo_url;
-    private int id;
+    private String email, name, photo_url,id;
 
     public NewUser() {
     }
@@ -36,11 +35,11 @@ public class NewUser {
         this.photo_url = photo_url;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 }
