@@ -105,7 +105,7 @@ public class DrawerFragment extends Fragment implements PhotoCallback{
 
         if (RESULT_OK == resultCode) {
             Bitmap photo = magicalCamera.getPhoto();
-            String path = magicalCamera.savePhotoInMemoryDevice(photo, "Avatar", "smartScan", MagicalCamera.JPEG, true);
+            String path = magicalCamera.savePhotoInMemoryDevice(photo, "Avatar", "smartscan", MagicalCamera.JPEG, true);
             path = "file://" + path;
             setPhoto(path);
 
@@ -122,7 +122,7 @@ public class DrawerFragment extends Fragment implements PhotoCallback{
     private void requestSelfie() {
         new AlertDialog.Builder(getActivity())
                 .setTitle("Sonrie... se viene Selfi")
-                .setMessage("Para usar esta maravilloza App debes tener una Selfie =P")
+                .setMessage("Para usar esta maravillosa App debes tener una Selfie =P")
                 .setCancelable(false)
                 .setPositiveButton("Selfie", new DialogInterface.OnClickListener() {
                     @Override

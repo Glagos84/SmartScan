@@ -21,6 +21,10 @@ public class Nodes {
 
     }
 
+    public DatabaseReference scanProducts(){
 
+        return root.child("scans");
+
+    }
 
 }
