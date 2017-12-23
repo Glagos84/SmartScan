@@ -69,15 +69,20 @@ public class UserLoginActivity extends AppCompatActivity implements UserLoginCal
             if (ResultCodes.OK == resultCode) {
 
                 loggedUser();
+                ScanProduct();
+
+
+            }
+
+        }
+    }
+
+    protected void ScanProduct(){
+
                 Toast.makeText(this, "Sesión Iniciada :D", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(this, ScanActivity.class);
                 startActivity(intent);
                 finish();
 
-            }
-
-
-
-        }
     }
 }

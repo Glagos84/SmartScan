@@ -62,4 +62,6 @@ public class ScanActivity extends AppCompatActivity implements ZXingScannerView.
         }
     }
 
+
+
 }

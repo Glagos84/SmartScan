@@ -35,6 +35,7 @@ public class DrawerFragment extends Fragment implements PhotoCallback{
 
     private MagicalPermissions magicalPermissions;
     private MagicalCamera magicalCamera;
+
     private int PHOTO_SIZE = 40;
     private CircularImageView avatar;
 
@@ -101,7 +102,8 @@ public class DrawerFragment extends Fragment implements PhotoCallback{
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        magicalCamera.resultPhoto(requestCode, resultCode, data);
+        magicalCamera.resultPhoto(requestCode, resultCode, data,MagicalCamera.ORIENTATION_ROTATE_90);
+
 
         if (RESULT_OK == resultCode) {
             Bitmap photo = magicalCamera.getPhoto();
