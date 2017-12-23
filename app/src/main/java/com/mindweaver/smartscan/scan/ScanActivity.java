@@ -1,6 +1,7 @@
 package com.mindweaver.smartscan.scan;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -11,10 +12,12 @@ import android.widget.Toast;
 
 import com.google.zxing.Result;
 import com.mindweaver.smartscan.R;
+import com.mindweaver.smartscan.models.Product;
+import com.mindweaver.smartscan.views.ProductActivity;
 
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
-public class ScanActivity extends AppCompatActivity implements ZXingScannerView.ResultHandler{
+public class ScanActivity extends AppCompatActivity implements ZXingScannerView.ResultHandler, UploadCodeBarCallback{
 
 
     private static final int RC_CAMERA_PERMISSION = 343;
@@ -53,6 +56,7 @@ public class ScanActivity extends AppCompatActivity implements ZXingScannerView.
 
         // If you would like to resume scanning, call this method below:
         mScannerView.resumeCameraPreview(this);
+        new UploadCodeBar(this).toFireBase(result.getText());
     }
 
     @Override
@@ -63,5 +67,17 @@ public class ScanActivity extends AppCompatActivity implements ZXingScannerView.
     }
 
 
+    @Override
+    public void codeBarExists(Product product) {
 
+    }
+
+    @Override
+    public void codeBarNoExists(String codeBar) {
+
+        Intent intent = new Intent(this, ProductActivity.class);
+        startActivity(intent);
+        finish();
+
+    }
 }
