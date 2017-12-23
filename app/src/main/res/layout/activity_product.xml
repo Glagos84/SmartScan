@@ -38,7 +38,7 @@
         android:layout_alignBottom="@+id/nameLabelTv"
         android:layout_alignParentStart="true"
         android:layout_marginStart="74dp"
-        android:text="fmds,"
+
         android:textSize="16sp" />
 
     <TextView
@@ -59,7 +59,7 @@
         android:layout_alignBaseline="@+id/brandLabelTv"
         android:layout_alignBottom="@+id/brandLabelTv"
         android:layout_alignStart="@+id/nameProductTv"
-        android:text="sdds"
+
         android:textSize="16sp" />
 
     <TextView
@@ -80,7 +80,7 @@
         android:layout_alignBaseline="@+id/priceTv"
         android:layout_alignBottom="@+id/priceTv"
         android:layout_alignStart="@+id/nameBrandTv"
-        android:text="dsd"
+
 
         android:textSize="16sp"
         android:textStyle="bold" />
