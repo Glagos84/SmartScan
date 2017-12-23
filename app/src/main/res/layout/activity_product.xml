@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mindweaver.smartscan.views.ProductActivity">
+
+
+    <TextView
+        android:id="@+id/detailsProduct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:text="Detalle Producto"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/nameLabelTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+
+        android:layout_below="@+id/detailsProduct"
+        android:padding="8dp"
+
+        android:text="Nombre:"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/nameProductTv"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/nameLabelTv"
+        android:layout_alignBottom="@+id/nameLabelTv"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="74dp"
+        android:text="fmds,"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/brandLabelTv"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/nameLabelTv"
+        android:padding="8dp"
+        android:text="Marca:"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/nameBrandTv"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/brandLabelTv"
+        android:layout_alignBottom="@+id/brandLabelTv"
+        android:layout_alignStart="@+id/nameProductTv"
+        android:text="sdds"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/priceTv"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/brandLabelTv"
+        android:padding="8dp"
+        android:text="Precio:"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/detailPrice"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/priceTv"
+        android:layout_alignBottom="@+id/priceTv"
+        android:layout_alignStart="@+id/nameBrandTv"
+        android:text="dsd"
+
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

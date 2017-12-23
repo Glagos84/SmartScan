@@ -6,5 +6,6 @@ package com.mindweaver.smartscan.scan;
 
 public interface UploadCodeBarCallback {
 
-
+    void codeBarExists();
+    void codeBarNoExists();
 }
