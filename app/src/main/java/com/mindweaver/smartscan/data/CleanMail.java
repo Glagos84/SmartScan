@@ -16,19 +16,12 @@ public class CleanMail {
 
     }
 
-    public String keyEmail(String otherEmail){
+    public String keyEmail(){
         String currentEmail = new CurrentUser().email();
         List<String> emails = new ArrayList<>();
         emails.add(sanitizedEmail(currentEmail));
-        emails.add(sanitizedEmail(otherEmail));
+
         Collections.sort(emails);
-     /*   List<LocalUser> localUsers = new ArrayList<>();
-        Collections.sort(localUsers, new Comparator<LocalUser>() {
-            @Override
-            public int compare(LocalUser t1, LocalUser t2) {
-                return t1.getName().compareTo(t2.getName());
-            }
-        });*/
 
         return emails.get(0) + " - " + emails.get(1);
 

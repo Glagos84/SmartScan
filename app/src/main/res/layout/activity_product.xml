@@ -21,10 +21,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-
         android:layout_below="@+id/detailsProduct"
         android:padding="8dp"
-
         android:text="Nombre:"
         android:textSize="16sp"
         android:textStyle="bold" />
@@ -37,7 +35,6 @@
         android:layout_alignBottom="@+id/nameLabelTv"
         android:layout_alignParentStart="true"
         android:layout_marginStart="74dp"
-
         android:textSize="16sp" />
 
     <TextView
@@ -58,7 +55,6 @@
         android:layout_alignBaseline="@+id/brandLabelTv"
         android:layout_alignBottom="@+id/brandLabelTv"
         android:layout_alignStart="@+id/nameProductTv"
-
         android:textSize="16sp" />
 
     <TextView
@@ -82,11 +78,52 @@
         android:textSize="16sp"
         android:textStyle="bold" />
 
+    <TextView
+        android:id="@+id/placeTv"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/codeLabelTv"
+        android:padding="8dp"
+        android:text="Lugar de Compra:"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/placeEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/placeTv"
+        android:layout_alignStart="@+id/codeBarDetail"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/codeLabelTv"
+        android:layout_width="105dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/priceTv"
+        android:layout_alignParentStart="true"
+        android:padding="8dp"
+        android:text="Código de Barra"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/codeBarDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/codeLabelTv"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/nameLabelTv"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
     <Button
         android:id="@+id/saveBtn"
         android:layout_width="100dp"
         android:layout_height="60dp"
-        android:layout_below="@+id/detailPrice"
+        android:layout_below="@+id/placeTv"
         android:layout_centerHorizontal="true"
         android:text="GUARDAR PRODUCTO" />
 

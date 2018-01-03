@@ -76,6 +76,7 @@ public class ScanActivity extends AppCompatActivity implements ZXingScannerView.
     public void codeBarNoExists(String codeBar) {
 
         Intent intent = new Intent(this, ProductActivity.class);
+        intent.putExtra("Code",codeBar);
         startActivity(intent);
         finish();
 

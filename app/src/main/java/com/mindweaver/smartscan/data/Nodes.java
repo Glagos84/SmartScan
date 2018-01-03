@@ -10,6 +10,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class Nodes {
 
     private DatabaseReference root = FirebaseDatabase.getInstance().getReference();// referencia raiz
+
     public DatabaseReference users(){
 
         return root.child("users");
@@ -21,10 +22,13 @@ public class Nodes {
 
     }
 
-    public DatabaseReference scanProducts(){
+    public DatabaseReference codeBar(){
 
         return root.child("scans");
 
     }
+
+
+
 
 }

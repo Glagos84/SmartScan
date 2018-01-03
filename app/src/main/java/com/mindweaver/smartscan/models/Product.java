@@ -8,7 +8,7 @@ import java.io.Serializable;
 
 public class Product implements Serializable {
 
-    private String codeBar, formatCodeBar;
+    private String codeBar, formatCodeBar, name, brand, price, place, key;
 
     public Product() {
     }
@@ -27,5 +27,45 @@ public class Product implements Serializable {
 
     public void setFormatCodeBar(String formatCodeBar) {
         this.formatCodeBar = formatCodeBar;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
+    }
+
+    public String getPlace() {
+        return place;
+    }
+
+    public void setPlace(String place) {
+        this.place = place;
+    }
+
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
     }
 }
