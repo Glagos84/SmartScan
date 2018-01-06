@@ -24,6 +24,7 @@ import com.google.android.gms.tasks.Task;
 import com.mindweaver.smartscan.R;
 import com.mindweaver.smartscan.data.CurrentUser;
 import com.mindweaver.smartscan.login.UserLoginActivity;
+import com.mindweaver.smartscan.scan.ScanActivity;
 import com.squareup.picasso.Picasso;
 
 import static android.app.Activity.RESULT_OK;
@@ -112,6 +113,7 @@ public class DrawerFragment extends Fragment implements PhotoCallback{
             setPhoto(path);
 
             new UploadPhoto(getContext()).toFireBase(path); // con esto lo subo a FireBase
+            ScanProduct();
 
         } else {
 
@@ -160,5 +162,16 @@ public class DrawerFragment extends Fragment implements PhotoCallback{
 
         setPhoto(url);
 
+
     }
+
+    public void ScanProduct(){
+
+
+        Intent intent = new Intent(getContext(), ScanActivity.class);
+        startActivity(intent);
+        getActivity().finish();
+
+    }
+
 }

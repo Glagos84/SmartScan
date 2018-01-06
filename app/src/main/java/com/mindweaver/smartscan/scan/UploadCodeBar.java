@@ -21,7 +21,7 @@ public class UploadCodeBar extends AppCompatActivity {
     }
 
     public void toFireBase(final String codebar) {
-        new Nodes().codeBar().child(codebar).addListenerForSingleValueEvent(new ValueEventListener() {
+        new Nodes().codeBar(codebar).child(codebar).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 if (dataSnapshot.exists()) {

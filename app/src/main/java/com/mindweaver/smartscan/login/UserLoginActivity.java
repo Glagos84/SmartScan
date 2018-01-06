@@ -4,13 +4,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.Toast;
 
 import com.firebase.ui.auth.AuthUI;
 import com.firebase.ui.auth.ResultCodes;
 import com.mindweaver.smartscan.MainActivity;
 import com.mindweaver.smartscan.R;
-import com.mindweaver.smartscan.scan.ScanActivity;
 
 import java.util.Arrays;
 
@@ -31,6 +29,7 @@ public class UserLoginActivity extends AppCompatActivity implements UserLoginCal
 
     @Override
     public void loggedUser() {
+
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
         finish();
@@ -69,20 +68,15 @@ public class UserLoginActivity extends AppCompatActivity implements UserLoginCal
             if (ResultCodes.OK == resultCode) {
 
                 loggedUser();
-                ScanProduct();
+
 
 
             }
 
         }
-    }
 
-    protected void ScanProduct(){
-
-                Toast.makeText(this, "Sesión Iniciada :D", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(this, ScanActivity.class);
-                startActivity(intent);
-                finish();
 
     }
+
+
 }

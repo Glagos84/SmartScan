@@ -8,7 +8,8 @@ import java.io.Serializable;
 
 public class Product implements Serializable {
 
-    private String codeBar, formatCodeBar, name, brand, price, place, key;
+    private String codeBar, formatCodeBar, name, brand, price, place, Uid;
+
 
     public Product() {
     }
@@ -61,11 +62,11 @@ public class Product implements Serializable {
         this.place = place;
     }
 
-    public String getKey() {
-        return key;
+    public String getUid() {
+        return Uid;
     }
 
-    public void setKey(String key) {
-        this.key = key;
+    public void setUid(String uid) {
+        this.Uid = uid;
     }
 }

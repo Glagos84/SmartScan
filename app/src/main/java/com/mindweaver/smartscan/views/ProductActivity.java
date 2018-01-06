@@ -1,5 +1,6 @@
 package com.mindweaver.smartscan.views;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -7,12 +8,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.mindweaver.smartscan.MainActivity;
 import com.mindweaver.smartscan.R;
 import com.mindweaver.smartscan.scan.SaveProductInfo;
 
 public class ProductActivity extends AppCompatActivity {
 
-
+    public ProductActivity() {
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +41,13 @@ public class ProductActivity extends AppCompatActivity {
 
                 new SaveProductInfo().saveData(code.getText().toString(),nameProduct.getText().toString(),brand.getText().toString()
                         ,price.getText().toString(),place.getText().toString());
+                Intent BackToDrawerFragment = new Intent(view.getContext(), MainActivity.class);
+                startActivity(BackToDrawerFragment);
+                //finish();
+
+
+
+
 
             }
         });

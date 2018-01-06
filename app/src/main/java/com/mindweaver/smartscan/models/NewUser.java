@@ -8,6 +8,7 @@ public class NewUser {
 
     private String email, name, photo_url,id;
 
+
     public NewUser() {
     }
 

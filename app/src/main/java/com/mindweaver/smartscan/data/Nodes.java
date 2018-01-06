@@ -2,6 +2,7 @@ package com.mindweaver.smartscan.data;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 
 /**
  * Created by Gabriel on 22-12-2017.
@@ -22,10 +23,18 @@ public class Nodes {
 
     }
 
-    public DatabaseReference codeBar(){
-
+    private DatabaseReference scans() {
         return root.child("scans");
+    }
 
+    public DatabaseReference codeBar(String codebar){
+
+        return scans().child(codebar);
+
+    }
+
+    public Query userProducts() {
+        return scans().orderByChild("uid").equalTo(new CurrentUser().uid());
     }
 
 
