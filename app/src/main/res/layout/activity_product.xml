@@ -9,12 +9,22 @@
     <TextView
         android:id="@+id/detailsProduct"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:layout_alignParentTop="true"
         android:layout_centerInParent="true"
         android:text="Detalle Producto"
         android:textSize="18sp"
         android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/productPhotoIv"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/nameProductTv"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="17dp"
+        android:padding="8dp" />
 
     <TextView
         android:id="@+id/nameLabelTv"
@@ -119,6 +129,8 @@
         android:layout_toEndOf="@id/nameLabelTv"
         android:textSize="16sp"
         android:textStyle="bold" />
+
+
 
     <Button
         android:id="@+id/saveBtn"

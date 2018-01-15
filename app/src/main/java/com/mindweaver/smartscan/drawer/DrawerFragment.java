@@ -21,6 +21,7 @@ import com.frosquivel.magicalcamera.MagicalPermissions;
 import com.github.siyamed.shapeimageview.CircularImageView;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.mindweaver.smartscan.ProductPhoto.TakeProductPhoto;
 import com.mindweaver.smartscan.R;
 import com.mindweaver.smartscan.data.CurrentUser;
 import com.mindweaver.smartscan.login.UserLoginActivity;
@@ -114,6 +115,7 @@ public class DrawerFragment extends Fragment implements PhotoCallback{
 
             new UploadPhoto(getContext()).toFireBase(path); // con esto lo subo a FireBase
             ScanProduct();
+            TakeProductPhoto();
 
         } else {
 
@@ -171,6 +173,16 @@ public class DrawerFragment extends Fragment implements PhotoCallback{
         Intent intent = new Intent(getContext(), ScanActivity.class);
         startActivity(intent);
         getActivity().finish();
+
+    }
+
+    public void TakeProductPhoto(){
+
+
+        Intent intent = new Intent(getActivity(), TakeProductPhoto.class);
+        startActivity(intent);
+        getActivity().finish();// finalizar la activity dentro de un fragmento
+        //new TakeProductPhoto().requestProductPhoto();
 
     }
 

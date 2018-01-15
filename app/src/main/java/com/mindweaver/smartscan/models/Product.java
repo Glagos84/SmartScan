@@ -8,7 +8,7 @@ import java.io.Serializable;
 
 public class Product implements Serializable {
 
-    private String codeBar, formatCodeBar, name, brand, price, place, Uid;
+    private String codeBar, formatCodeBar, name, brand, price, place, Uid,photo;
 
 
     public Product() {
@@ -68,5 +68,13 @@ public class Product implements Serializable {
 
     public void setUid(String uid) {
         this.Uid = uid;
+    }
+
+    public String getPhoto() {
+        return photo;
+    }
+
+    public void setPhoto(String photo) {
+        this.photo = photo;
     }
 }
