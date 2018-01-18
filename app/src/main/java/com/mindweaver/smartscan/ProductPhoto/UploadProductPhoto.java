@@ -33,7 +33,7 @@ public class UploadProductPhoto {
         final CurrentUser currentUser = new CurrentUser();
         String folder = new CleanMail().sanitizedEmail(currentUser.email() + "/");
         String ProductNamePhoto = "product.jpeg";
-        String baseUrl = "gs://smartscan-9739e.appspot.com//products/";
+        String baseUrl = "gs://smartscan-9739e.appspot.com/products/";
         String refUrl = baseUrl + folder + ProductNamePhoto;
 
         StorageReference storageReference = FirebaseStorage.getInstance().getReference(refUrl);

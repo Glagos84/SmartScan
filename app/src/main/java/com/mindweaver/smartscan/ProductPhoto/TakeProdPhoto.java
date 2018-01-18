@@ -1,43 +1,38 @@
 package com.mindweaver.smartscan.ProductPhoto;
 
 import android.Manifest;
-import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.ImageView;
 
 import com.frosquivel.magicalcamera.MagicalCamera;
 import com.frosquivel.magicalcamera.MagicalPermissions;
-import com.github.siyamed.shapeimageview.CircularImageView;
 import com.mindweaver.smartscan.R;
 import com.mindweaver.smartscan.drawer.PhotoCallback;
-import com.mindweaver.smartscan.drawer.PhotoValidation;
 import com.squareup.picasso.Picasso;
 
-/**
- * Created by Gabriel on 06-01-2018.
- */
+public class TakeProdPhoto extends AppCompatActivity implements PhotoCallback{
 
-public class TakeProductPhoto extends AppCompatActivity implements PhotoCallback {
 
     private MagicalPermissions magicalPermissions;
     private MagicalCamera magicalCamera;
 
     private int PHOTO_SIZE = 40;
-    private CircularImageView product;
+    private ImageView product;
 
-    public TakeProductPhoto() {
+    public TakeProdPhoto() {
     }
 
-    @SuppressLint("WrongViewCast")
+
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_take_prod_photo);
 
         String[] permissions = new String[]{
                 Manifest.permission.CAMERA,
@@ -45,15 +40,12 @@ public class TakeProductPhoto extends AppCompatActivity implements PhotoCallback
                 Manifest.permission.WRITE_EXTERNAL_STORAGE
         };
 
-
         magicalPermissions = new MagicalPermissions(this, permissions);
         magicalCamera = new MagicalCamera(this, PHOTO_SIZE, magicalPermissions);
         product = findViewById(R.id.productPhotoIv);
-        new PhotoValidation(this, this).validate();
 
 
     }
-
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
@@ -66,7 +58,7 @@ public class TakeProductPhoto extends AppCompatActivity implements PhotoCallback
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        magicalCamera.resultPhoto(requestCode, resultCode, data,MagicalCamera.ORIENTATION_ROTATE_90);
+        magicalCamera.resultPhoto(requestCode, resultCode, data, MagicalCamera.ORIENTATION_ROTATE_90);
 
 
         if (RESULT_OK == resultCode) {
@@ -86,9 +78,7 @@ public class TakeProductPhoto extends AppCompatActivity implements PhotoCallback
 
     }
 
-    public void requestProductPhoto(){
-
-
+    public void requestProductPhoto() {
 
 
         new AlertDialog.Builder(this)
@@ -116,10 +106,13 @@ public class TakeProductPhoto extends AppCompatActivity implements PhotoCallback
 
     }
 
+
+
     @Override
     public void empyPhoto() {
 
         requestProductPhoto();
+
 
     }
 

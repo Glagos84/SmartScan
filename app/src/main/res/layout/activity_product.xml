@@ -45,7 +45,10 @@
         android:layout_alignBottom="@+id/nameLabelTv"
         android:layout_alignParentStart="true"
         android:layout_marginStart="74dp"
-        android:textSize="16sp" />
+        android:textSize="16sp"
+        android:maxLines="1"
+        android:inputType="text"
+        android:lines="1"/>
 
     <TextView
         android:id="@+id/brandLabelTv"
@@ -56,7 +59,8 @@
         android:padding="8dp"
         android:text="Marca:"
         android:textSize="16sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:maxLines="1"/>
 
     <EditText
         android:id="@+id/nameBrandTv"
@@ -65,7 +69,10 @@
         android:layout_alignBaseline="@+id/brandLabelTv"
         android:layout_alignBottom="@+id/brandLabelTv"
         android:layout_alignStart="@+id/nameProductTv"
-        android:textSize="16sp" />
+        android:textSize="16sp"
+        android:maxLines="1"
+        android:inputType="text"
+        />
 
     <TextView
         android:id="@+id/priceTv"
@@ -76,7 +83,8 @@
         android:padding="8dp"
         android:text="Precio:"
         android:textSize="16sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:maxLines="1"/>
 
     <EditText
         android:id="@+id/detailPrice"
@@ -87,7 +95,10 @@
         android:layout_alignParentEnd="true"
         android:layout_alignStart="@+id/nameBrandTv"
         android:textSize="16sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:maxLines="1"
+        android:inputType="text"
+        />
 
     <TextView
         android:id="@+id/placeTv"
@@ -97,7 +108,8 @@
         android:padding="8dp"
         android:text="Lugar de Compra:"
         android:textSize="16sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:maxLines="1"/>
 
     <EditText
         android:id="@+id/placeEt"
@@ -106,7 +118,10 @@
         android:layout_alignBottom="@id/placeTv"
         android:layout_alignStart="@id/codeBarDetail"
         android:textSize="16sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:maxLines="1"
+        android:inputType="text"
+        />
 
 
     <TextView
@@ -128,16 +143,24 @@
         android:layout_alignParentEnd="true"
         android:layout_toEndOf="@id/nameLabelTv"
         android:textSize="16sp"
+        android:maxLines="1"
         android:textStyle="bold" />
 
+    <Button
+        android:id="@+id/saveProductPhoto"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:layout_below="@+id/placeEt"
+        android:layout_toEndOf="@+id/saveBtn"
+        android:text="Tomar Foto al Producto" />
 
 
     <Button
         android:id="@+id/saveBtn"
         android:layout_width="100dp"
-        android:layout_height="60dp"
-        android:layout_below="@id/placeTv"
-        android:layout_centerHorizontal="true"
+        android:layout_height="70dp"
+        android:layout_below="@+id/placeEt"
+        android:layout_toEndOf="@+id/codeLabelTv"
         android:text="GUARDAR PRODUCTO" />
 
 </RelativeLayout>

@@ -25,6 +25,10 @@ public class UserLoginActivity extends AppCompatActivity implements UserLoginCal
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         new UserLoginPresenter(this).login();
+
+
+
+
     }
 
     @Override
@@ -51,7 +55,9 @@ public class UserLoginActivity extends AppCompatActivity implements UserLoginCal
                                         new AuthUI.IdpConfig.Builder(AuthUI.GOOGLE_PROVIDER).build(),
                                         new AuthUI.IdpConfig.Builder(AuthUI.FACEBOOK_PROVIDER).build())
                         )
+                        .setLogo(R.mipmap.imagen)
                         .build(),
+
                 RC_SIGN_IN);
 
 

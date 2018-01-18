@@ -23,7 +23,7 @@ public class Nodes {
 
     }
 
-    private DatabaseReference scans() {
+    public DatabaseReference scans() {
         return root.child("scans");
     }
 

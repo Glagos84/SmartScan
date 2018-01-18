@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.mindweaver.smartscan.MainActivity;
+import com.mindweaver.smartscan.ProductPhoto.TakeProdPhoto;
 import com.mindweaver.smartscan.R;
 import com.mindweaver.smartscan.scan.SaveProductInfo;
 
@@ -31,7 +32,7 @@ public class ProductActivity extends AppCompatActivity {
         final EditText brand = findViewById(R.id.nameBrandTv);
         final EditText price = findViewById(R.id.detailPrice);
         final EditText place = findViewById(R.id.placeEt);
-
+        final Button   uploadProductPhoto = findViewById(R.id.saveProductPhoto);
         final Button saveProduct = findViewById(R.id.saveBtn);
 
 
@@ -53,6 +54,28 @@ public class ProductActivity extends AppCompatActivity {
         });
 
 
+        uploadProductPhoto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+               TakeProductPhoto();
+
+            }
+        });
+
+
+
+
+
+    }
+
+    public void TakeProductPhoto(){
+
+
+        Intent intent = new Intent(this, TakeProdPhoto.class);
+        startActivity(intent);
+        finish();// finalizar la activity dentro de un fragmento
+        //new TakeProductPhoto().requestProductPhoto();
 
     }
 

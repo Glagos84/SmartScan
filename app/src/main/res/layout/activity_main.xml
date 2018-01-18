@@ -7,10 +7,19 @@
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
 
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/productRv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+
     <include
         layout="@layout/app_bar_main"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
 
 
     <android.support.design.widget.NavigationView
@@ -25,9 +34,12 @@
             android:id="@+id/drawerFragment"
             android:name="com.mindweaver.smartscan.drawer.DrawerFragment"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent" />
         <!--//com el name agrego el fragment al navegation view-->
 
+
     </android.support.design.widget.NavigationView>
+
+
 
 </android.support.v4.widget.DrawerLayout>

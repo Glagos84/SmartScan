@@ -30,7 +30,7 @@ public class UploadPhoto {
         final CurrentUser currentUser = new CurrentUser();
         String folder = new CleanMail().sanitizedEmail(currentUser.email() + "/");
         String photoName = "avatar.jpeg";
-        String baseUrl = "gs://smartscan-9739e.appspot.com//avatars/";
+        String baseUrl = "gs://smartscan-9739e.appspot.com/avatars/";
         String refUrl = baseUrl + folder + photoName;
         StorageReference storageReference = FirebaseStorage.getInstance().getReferenceFromUrl(refUrl);
         storageReference.putFile(Uri.parse(path)).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {

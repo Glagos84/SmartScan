@@ -6,5 +6,5 @@ package com.mindweaver.smartscan.adapters;
 
 public interface ProductListener {
 
-    void clicked(String email);
+    void clicked(String codeBar);
 }
